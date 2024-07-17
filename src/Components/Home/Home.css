@@ -1,0 +1,84 @@
+.img{
+    width:150px;
+    height:100px
+}
+
+    
+  /* hero section  */
+  .button{
+    border-radius: 25px;
+    background-color: goldenrod;
+    border:none;
+    width:300px; 
+    height:40px
+}
+.header{
+    margin:50px;
+}
+ .heading{
+   
+    color:goldenrod
+ }
+ .para{
+    font-size: 20px;
+ }
+ .beach{
+    width:200px;
+    height:350px;
+    border-radius: 20px;
+    border:none;
+ }
+ .street{
+    width:200px;
+    height:350px;
+    border-radius: 20px;
+    border:none;
+ }
+ .video{
+    width:200px;
+    height:650px;
+    border-radius: 20px;
+    border:none;
+    position:relative;
+    top:-250px
+
+ }
+ .search{
+    background-color: azure;
+    border:none;
+ }
+ .input{
+    border:none;
+ }
+
+ /* Service section */
+ .template{
+    margin:150px;
+ }
+ /* Slider section */
+ .slider{
+    margin:150px
+
+ }
+ .gallery{
+    color:black;
+    background-color: orange;
+    width:100px;
+    border-radius: 25px;
+ }
+ .imggallary{
+    display: grid;
+    grid-template-columns: repeat(5,5fr);
+    margin:20px;
+ }
+ .gallary1{
+    width:250px;
+    height:150px;
+    margin:10px;
+ }
+ .buttonclient{
+    color:black;
+    background-color: orange;
+    border-radius: 25px;
+    border:none;
+ }
