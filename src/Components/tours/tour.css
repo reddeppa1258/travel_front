@@ -1,0 +1,11 @@
+.simg{
+    width:550px;
+    height:250px;
+    margin-top:40px;
+
+}
+.single{
+    background-color: white;
+    border:1px solid black;
+    border-radius: 5px;
+}
