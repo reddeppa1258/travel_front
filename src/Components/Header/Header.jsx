@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "../Header/Header.css"
 const Header = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+    <div className="color">
+      <nav class=" navbar navbar-expand-lg color" >
+        <div class="container-fluid  ">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -32,6 +33,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      </div>
     </>
   );
 };

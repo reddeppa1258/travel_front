@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import Tourblog from "../tours/Tourblog";
+import Tour from "../Tour/Tour";
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tourblog/:id" element={<Tourblog />} />
+        <Route path="/tour" element={< Tour/>} />
       </Routes>
     </>
   );
