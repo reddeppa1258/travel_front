@@ -1,0 +1,73 @@
+.herotour{
+    background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i08a893e2a21fee40/version/1584889835/best-beaches-in-spain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:500px;
+}
+.head{
+    position:relative;
+    top:250px;
+    left:490px;
+    font-size: 60px;
+    color: white;
+}
+.tourcard{
+    margin:50px;
+}
+.layouttour{
+    border:1px solid gray;
+    background-color:white;
+    width:300px;
+  
+}
+.imgtour{
+    width:300px;
+    position:relative;
+    left:-12px;
+}
+.subscribe{
+    background-color: rgba(202,229,244,255);
+    height:400px;
+    margin-right: 50px;
+   
+}
+.sub{
+    margin: 50px;
+   
+}
+.h1{
+   position: relative;
+   top:60px;
+}
+.email{
+    width:600px;
+    height:80px;
+    position:relative;
+    top:80px;
+    border:none;
+    border-radius: 5px;
+    font-size: 20px;
+   
+}
+.subbutton{
+    background-color:orange;
+    position:relative;
+    top:6px;
+    left:470px;
+    border:none;
+    border-radius: 5px;
+    height:68px;
+    width:120px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+.para{
+    position:relative;
+    top:50px;
+}
+.subimage{
+    
+    width:700px;
+    height:350px;
+}

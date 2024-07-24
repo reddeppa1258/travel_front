@@ -9,3 +9,11 @@
     border:1px solid black;
     border-radius: 5px;
 }
+.bookingform{
+    margin:20px
+}
+.formb{
+    border:1px solid gray;
+    gap:10px;
+    
+}

@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
-import { BASE_URL } from "../utilities/Confiig";
+import { BASE_URL ,token} from "../utilities/Confiig";
 import { AuthContext } from "../Context/authContext";
+import "../Login/login.css"
+import { IoMdPerson } from "react-icons/io";
 
 const Login = ()=>{
 
@@ -12,10 +14,13 @@ const Login = ()=>{
     })
     const navigate = useNavigate();
     const {dispatch } = useContext(AuthContext)
+    const accesstoken =token
+   
+    console.log("before login",accesstoken)
     const handleChange=(e)=>{
         setcredentials((prev)=>({...prev,[e.target.name]:e.target.value}))
     }
-    console.log(credentails)
+    // console.log(credentails)
     const handlesubmitChange = async(e)=>{
         e.preventDefault();
         dispatch({type:"LOGIN_START"})
@@ -29,8 +34,9 @@ const Login = ()=>{
             const result = await response.json();
             if(!result.ok){
 
-                console.log(result.message)
+                // console.log(result.message)
             }
+            console.log("after login",result.token);
             dispatch({type:"LOGIN_SUCCESS",
                 payload:result.data,
                 token:result.token,
@@ -50,10 +56,13 @@ const Login = ()=>{
             <div className="card-body">
                 <div className="row">
                     <div className="col-md-2"></div>
-                    <div className="col-md-4"></div>
                     <div className="col-md-4">
+                        <img src="https://media.mktg.workday.com/is/image/workday/illustration-people-login?fmt=png-alpha&wid=1000"  alt="loimg" className="limg" />
+                    </div>
+                    <div className="col-md-4 logined">
                         <form onSubmit={handlesubmitChange}>
-                            <h1>Login</h1>
+                              <h1 ><IoMdPerson  className="icon"/></h1>
+                            <h1 className="login">Login</h1>
                             
                             <input type="email" placeholder="Email" name="email" className="mt-3 input" onChange={handleChange}/><br></br>
                             <input type="number" placeholder="Password" name="password" className="mt-3 input"  onChange={handleChange}/><br></br>

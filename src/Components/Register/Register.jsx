@@ -3,6 +3,7 @@ import "../Register/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utilities/Confiig";
 import { Navigate } from "react-router-dom";
+import { IoMdPerson } from "react-icons/io";
 
 const Register = () => {
   const [data, setData] = useState({
@@ -39,10 +40,13 @@ const Register = () => {
       <div className="card-body">
         <div className="row">
           <div className="col-md-2"></div>
-          <div className="col-md-4"></div>
           <div className="col-md-4">
+            <img src="https://media.istockphoto.com/id/1463013729/photo/online-registration-form-for-modish-form-filling.jpg?s=612x612&w=0&k=20&c=Fnx06haU4IHYLcRpy9Po_TBknvBqVjicGuUWkGu8e6Y=" alt="registerimg" className="rimg" />
+          </div>
+          <div className="col-md-4 registered ">
             <form onSubmit={handleClick}>
-              <h1>Register</h1>
+             <h1 ><IoMdPerson  className="icon"/></h1>
+              <h1 className="regis">Register</h1>
               <input
                 type="text"
                 placeholder=" User name"

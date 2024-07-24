@@ -1,5 +1,7 @@
 import React from "react";
 import "../Home/Home.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import Carousel from 'react-bootstrap/Carousel';
 import travel from "../Assets/travel.webp"
 import gallary1 from "../Assets/gallery1.png"
 import gallary2 from "../Assets/gallery2.jpg"
@@ -11,8 +13,8 @@ import gallary7 from "../Assets/gallery7.jpg"
 import gallary8 from "../Assets/gallary8.jpeg"
 import gallary9 from "../Assets/gallary9.jpg"
 import gallary10 from "../Assets/gallery10.jpg"
-import client from "../Assets/client1.webp"
-import client1 from "../Assets/client2.webp" 
+import client1 from "../Assets/client1.webp"
+import client2 from "../Assets/client2.webp" 
 
 
 
@@ -75,46 +77,37 @@ const Slider = () => {
             <div className="container">
                 <button className="buttonclient">Clients love</button>
                 <h1>What our Clients say about us </h1>
-                <div>
-                <div id="carouselExampleDark" class="carousel carousel-dark slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src={client} class="d-block w-25" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aliquid officiis sint illo facere eos iusto autem deleniti harum expedita.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src={client1} class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quam veniam qui. Aspernatur maxime ratione exercitationem labore ipsum nemo facere!</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="" class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+                <Carousel>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <img src={client2} alt="client2" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="Second slide" /> */}
+        <img src={client1} alt="img1"/>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="Third slide" /> */}
+        <img src={client2} alt="client2" />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
                 </div>
 
-            </div>
+            
         </>
     )
 }

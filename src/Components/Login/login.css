@@ -1,0 +1,26 @@
+.limg{
+    height:500px;
+    width:400px;
+    border:1px solid gray;
+}
+.logined{
+
+    height:500px;
+    width:300px;
+    background-color: goldenrod;
+  
+}
+.login{
+    position:relative;
+  margin-top: -10px;;
+    left:70px;
+}
+.icon{
+    width:150px;
+    height:120px;
+    position:relative;
+    top:-60px;
+    left:65px;
+    background-color: white;
+    border-radius: 100%;
+}
