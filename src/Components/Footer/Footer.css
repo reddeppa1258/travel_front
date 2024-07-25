@@ -1,0 +1,15 @@
+.h3{
+    margin-top: -100px;
+}
+.icons{
+    display: flex;
+    gap:30px;
+    
+}
+.foot{
+    margin-top: 100px;
+}
+.copy{
+    margin-top: 50px;
+    margin-left: 300px;
+}

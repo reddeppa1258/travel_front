@@ -49,6 +49,8 @@
     height:350px;
     border-radius: 20px;
     border:none;
+    position:relative;
+    top:-100px;
  }
  .video{
     width:200px;
@@ -61,7 +63,7 @@
 
  }
  .searchbar{
-margin:5px;
+margin-top:-350px;
 background-color: azure;
 border:1px solid gray;
 border-radius: 10px;
@@ -130,8 +132,27 @@ width:1700px;
     background-color: rgb(245, 243, 243);
  }
  .cards{
-   margin-top:50px;
+   margin-top:250px;
    margin-left: 50px;
+   
+ }
+ .service-container{
+   display: flex;
+   gap:10px;
+   justify-content: space-between;
+   padding:20px;
+
+ }
+ .serve{
+   width:350px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding:10px;
+   
+ }
+ 
+ .serve:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
  }
  .cloud{
    background-color: orange;
@@ -139,30 +160,110 @@ width:1700px;
    height:70px;
    border-radius: 50px;
  }
- /* Slider section */
- .slider{
-    margin:150px
-
+ 
+ .container1 {
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+   padding: 2rem;
  }
- .gallery{
-    color:black;
-    background-color: orange;
-    width:100px;
-    border-radius: 25px;
+ 
+ .buttonclient {
+   background-color: #007bff;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   font-size: 1.2rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-bottom: 1rem;
  }
- .imggallary{
-    display: grid;
-    grid-template-columns: repeat(5,5fr);
-    margin:20px;
+ 
+ .buttonclient:hover {
+   background-color: #0056b3;
  }
- .gallary1{
-    width:250px;
-    height:150px;
-    margin:10px;
+ 
+ h1 {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   color: #333;
  }
- .buttonclient{
-    color:black;
-    background-color: orange;
-    border-radius: 25px;
-    border:none;
+ 
+ .carousel-item {
+   padding: 1rem;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   margin-bottom: 2rem;
+   background-color: #f9f9f9;
  }
+ 
+ .carousel-item p {
+   font-size: 1rem;
+   color: #555;
+   line-height: 1.5;
+ }
+ 
+ .slidis {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 1rem;
+ }
+ 
+ .slidimg {
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   margin-right: 1rem;
+ }
+ 
+ h5 {
+   font-size: 1.2rem;
+   color: #333;
+ }
+ 
+ .carousel-caption h3 {
+   font-size: 1.5rem;
+   color: #333;
+ }
+ 
+ .carousel-caption p {
+   font-size: 1rem;
+   color: #777;
+ }
+ 
+ 
+ .gallery {
+   font-size: 1.5rem;
+   color: #007bff;
+   margin-bottom: 1rem;
+ }
+ 
+ h1 {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   color: #333;
+ }
+ 
+ .imggallary {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   justify-content: center;
+ }
+ 
+ .gallary1 {
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   border: 2px solid #ddd;
+   border-radius: 10px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .gallary1:hover {
+   transform: scale(1.05);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ 
