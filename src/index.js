@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import { AuthContextprovider } from './Components/Context/authContext';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { AuthContextprovider } from "./Components/Context/authContext";
+import SearchContextProvider from "./Components/Context/SearchContext";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-   <AuthContextprovider>
-
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-   
+    <AuthContextprovider>
+      <SearchContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </SearchContextProvider>
     </AuthContextprovider>
   </React.StrictMode>
 );

@@ -1,4 +1,21 @@
 .color{
-    background-color:gray;
+    background-color:orange;
     color:white;
+}
+.logout{
+   position:relative;
+   left:170px;
+   top:10px;
+   color:black
+}
+.username{
+    position:relative;
+   left:100px;
+   top:10px;
+   border-radius: 25%;
+   width:40px;
+   height:35px;
+   background-color:orange;
+   padding-left: 10px;
+   color:black;
 }

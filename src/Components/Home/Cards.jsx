@@ -21,14 +21,6 @@ const Cards = () => {
         <div className="container">
           <div className="crad-container">
             {blogData?.Tour?.map((item) => (
-              // <div className="col-md-3 m-2  layout">
-              //   <Link to={`/tourblog/${item._id}`}>
-              //     <img src={item.img} className="img" />
-              //     <h5>location:{item.location}</h5>
-              //     <h6>{item.heading}</h6>
-              //     <h6>price:{item.price}</h6>
-              //   </Link>
-              // </div>
               <div className="card" key={item._id}>
                 <Link className="link" to={`/tourblog/${item._id}`}>
                   <img src={item.img} alt="Card image" className="card-img" />

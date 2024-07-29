@@ -7,13 +7,15 @@ import Ratings from "./Ratings";
 import { TfiLocationPin } from "react-icons/tfi";
 import { FaLocationPin } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
+import { useSearchState } from "../Context/SearchContext";
 
-const Tourblog = () => {
+const Tourblog = ({ props }) => {
+  const people = useSearchState();
   const [credentials, setCredentials] = useState({
     username: "",
     phonenumber: "",
     date: "",
-    persons: "1",
+    persons: people.people || "1",
   });
   const [rating, setRating] = useState({
     comment: undefined,
@@ -51,9 +53,8 @@ const Tourblog = () => {
       const result = await response.json();
 
       if (!result.ok) {
-      } else {
-        navigate("/home");
       }
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
@@ -105,25 +106,6 @@ const Tourblog = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-7 single">
-            {/* {data && (
-              <>
-              <div>
-              <img src={data?.tour?.img} className="imgl" alt="img"/>
-              </div>
-             <div className="locationimg">
-             <h2 className="headingtour">{data?.tour?.heading}</h2>
-             <div className="disp">
-             <p><FaLocationPin size={30} />{data?.tour?.location}</p>
-             <p><TfiLocationPin size={30} />{data?.tour?.distance}K/M</p>
-            <p>{data?.tour?.price}/per person</p>
-             </div>
-           <h2>Description</h2>
-           <p>this is the description</p>
-
-             </div>
-               
-              </>
-            )} */}
             {data && (
               <>
                 <div>
@@ -193,13 +175,15 @@ const Tourblog = () => {
               <br />
               <div className="disprice">
                 <h5>
-                  {data?.tour?.price}X{credentials.persons} :
-                  {(data?.tour?.price)}
+                  {data?.tour?.price}X{credentials.persons} :{data?.tour?.price}
                 </h5>
 
                 <h5>service charges: 10</h5>
 
-                <h4>Total:{Number(data?.tour?.price)*Number(credentials.persons)+10}</h4>
+                <h4>
+                  Total:
+                  {Number(data?.tour?.price) * Number(credentials.persons) + 10}
+                </h4>
               </div>
               <button type="submit" className=" btnn">
                 Book Your Tour
@@ -232,9 +216,9 @@ const Tourblog = () => {
               <div className="revcol">
                 {reviewsdata?.review?.map((item) => (
                   <div className="ratingflex" key={item._id}>
-                    <h1 >
+                    <h1>
                       <BsPersonCircle size={30} />
-                     <span className="ml-3"> {item.user.username}</span>
+                      <span className="ml-3"> {item.user.username}</span>
                     </h1>
                     <h4>{item.ratings}</h4>
                     <h6>{item.comment}</h6>
