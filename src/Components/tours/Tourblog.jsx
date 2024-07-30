@@ -215,13 +215,13 @@ const Tourblog = ({ props }) => {
               </form>
               <div className="revcol">
                 {reviewsdata?.review?.map((item) => (
-                  <div className="ratingflex" key={item._id}>
+                  <div className="ratingflex" key={item?._id}>
                     <h1>
                       <BsPersonCircle size={30} />
-                      <span className="ml-3"> {item.user.username}</span>
+                      <span className="ml-3"> {item?.user.username}</span>
                     </h1>
-                    <h4>{item.ratings}</h4>
-                    <h6>{item.comment}</h6>
+                    <h4>{item?.ratings}</h4>
+                    <h6>{item?.comment}</h6>
                   </div>
                 ))}
               </div>

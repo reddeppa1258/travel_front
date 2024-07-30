@@ -9,7 +9,7 @@ import { GiPathDistance } from "react-icons/gi";
 import { MdPeople } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { BASE_URL } from "../utilities/Confiig";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useSearchState } from "../Context/SearchContext";
 
 const Hero = () => {
@@ -19,6 +19,7 @@ const Hero = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const people = useSearchState();
   const handleSearch = async () => {
@@ -40,8 +41,9 @@ const Hero = () => {
       }
       const data = await response.json();
       setResults(data);
-
+      navigate(`/searchsingletour/${data?.tour[0]?._id}`);
       console.log(results);
+      console.log(data);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -137,24 +139,6 @@ const Hero = () => {
         <div className="col-md-1"></div>
       </div>
       <div></div>
-      <div>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
-        <div className="crad1-container">
-          {results?.tour?.map((item) => (
-            <div className="card1" key={item._id}>
-              <Link className="link" to={`/tourblog/${item._id}`}>
-                <img src={item.img} alt="Card image" className="card1-img" />
-                <div className="card1-content">
-                  <h2 className="card1-title">{item.location}</h2>
-                  <p className="card1-text">{item.heading}</p>
-                  <p className="card1-btn">{item.price}/Per person</p>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };

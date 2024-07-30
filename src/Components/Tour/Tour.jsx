@@ -36,13 +36,13 @@ const Tour = ()=>{
                 //     <h6>price:{item.price}</h6>
                 //   </Link>
                 // </div>
-                <div className="card" key={item._id}>
-                <Link to={`/tourblog/${item._id}`}>
-                  <img src={item.img} alt="Card image" className="card-img" />
+                <div className="card" key={item?._id}>
+                <Link to={`/tourblog/${item?._id}`}>
+                  <img src={item?.img} alt="Card image" className="card-img" />
                   <div className="card-content">
-                    <h2 className="card-title">{item.location}</h2>
-                    <p className="card-text">{item.heading}</p>
-                    <p className="card-btn">{item.price}/Per person</p>
+                    <h2 className="card-title">{item?.location}</h2>
+                    <p className="card-text">{item?.heading}</p>
+                    <p className="card-btn">{item?.price}/Per person</p>
                   </div>
                 </Link>
               </div>
